@@ -1,0 +1,116 @@
+html body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu';
+    height: 100%;
+    background-color: #A8A089;
+}
+
+.header-container {
+    position: relative;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+header {
+    background-color: #FFFEFC;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+header > div {
+    color: black;
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    gap: 3rem;
+}
+
+ul > li > a:hover {
+    color: #bfbcb8 !important;
+    text-decoration: underline !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+div#content {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.review-content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color: #cac4b6 !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 1rem;
+}
+
+.review-text-holder {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.date-time {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem
+}
+
+.title-content {
+    background-color: #FFFEFC;
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+.models-content {
+    display: flex;
+    gap: 1rem;
+}
+
+.models-content > div {
+    background-color: #FFFEFC;
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+.article-content {
+    background-color: #FFFEFC;
+    padding: .5rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.img-content {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    width: 300px;
+}
