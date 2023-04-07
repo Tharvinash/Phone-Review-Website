@@ -1,30 +1,40 @@
+{% extends 'layout.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Review </title>
-    <link rel="stylesheet" href="{% static 'main/challenges.css' %}"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-</head>
-    <body>
-        <header>
-            <div>
-                Django Phone Review
+
+{% block page_title %}
+    Login
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'Main/login.css' %}"/>
+{% endblock %}
+
+
+{% block content %}
+    <div id="login-content">
+        <div class="login-card">
+            <div class="image-container">
+                <img src="{% static 'Images/89347.jpg' %}" alt="Phone Review" class="image-content">
             </div>
-            <nav>
-                <ul>
-                    <li><a href="{% url 'login' %}">Login</a></li>
-                    <li><a href="{% url 'register' %}">Register</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div id="content">
-            Login
+            <div style="width: calc(100% - 473.2px)">
+                <div class="form-container">
+                    <div style="margin-bottom: 1rem; font-size: 3rem;">
+                       User Login
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <input type="text" placeholder="Username"/>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <input type="password" placeholder="Password"/>
+                    </div>
+                    <div>
+                        <button class="button-login">Login</button>
+                    </div>
+                    <div class="create-account">
+                        Create your account -->
+                    </div>
+                </div>
+            </div>
         </div>
-    </body>
-</html>
+    </div>
+{% endblock %}

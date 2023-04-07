@@ -1,61 +1,44 @@
+{% extends 'layout.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Review </title>
-    <link rel="stylesheet" href="{% static 'Main/main.css' %}"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
-</head>
-    <body>
-        <div class="header-container">
-            <header>
-                <div>
-                    Django Phone Review
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="{% url 'login' %}">Login</a></li>
-                        <li><a href="{% url 'register' %}">Register</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
-        <main>
-            <div class="review-content">
-                <img 
-                    src="https://cdn.thewirecutter.com/wp-content/media/2022/05/budget-android-phone-2048px-0005.jpg" 
-                    alt="Phone Image"
-                    class="img-content"
-                />
 
-                <div class="review-text-holder">
-                    <div>Title: </div>
-                    <div class="title-content">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    </div>
-                    <div>Models: </div>
-                    <div class="models-content">
-                        <div>Samsung</div>
-                        <div>Sony</div>
-                        <div>Apple</div>
-                    </div>
-                    <article>
-                        Article: 
-                    </article>
-                    <div class="article-content">
-                        Morbi commodo ut mauris eget dictum. Nam ut nisl commodo, interdum arcu at, maximus ante. Pellentesque bibendum mauris non lacus ultrices, a scelerisque magna sagittis. Sed consequat consectetur velit, sed interdum quam pharetra quis. Pellentesque tincidunt laoreet quam vel blandit. Vivamus id leo id lorem congue tincidunt. Fusce sit amet tellus blandit, luctus felis ut, accumsan ipsum
-                    </div>
+{% block page_title %}
+    Phone Review
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'Main/main.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <main>
+        <div class="review-content">
+            <img 
+                src="{% static 'Images/review_img.jpg' %}" 
+                alt="Phone Image"
+                class="img-content"
+            />
+
+            <div class="review-text-holder">
+                <div>Title: </div>
+                <div class="title-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </div>
-                <div class="date-time">
-                    24/9/1999 23:14 pm
+                <div>Models: </div>
+                <div class="models-content">
+                    <div>Samsung</div>
+                    <div>Sony</div>
+                    <div>Apple</div>
+                </div>
+                <article>
+                    Article: 
+                </article>
+                <div class="article-content">
+                    Morbi commodo ut mauris eget dictum. Nam ut nisl commodo, interdum arcu at, maximus ante. Pellentesque bibendum mauris non lacus ultrices, a scelerisque magna sagittis. Sed consequat consectetur velit, sed interdum quam pharetra quis. Pellentesque tincidunt laoreet quam vel blandit. Vivamus id leo id lorem congue tincidunt. Fusce sit amet tellus blandit, luctus felis ut, accumsan ipsum
                 </div>
             </div>
-        </main>
-    </body>
-</html>
-
+            <div class="date-time">
+                24/9/1999 23:14 pm
+            </div>
+        </div>
+    </main>
+{% endblock %}

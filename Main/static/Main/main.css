@@ -3,7 +3,10 @@ html body {
     margin: 0;
     font-family: 'Ubuntu';
     height: 100%;
-    background-color: #A8A089;
+    /* background-color: #A8A089; */
+    background-size: cover;
+    background-position: center;
+    background-image: url('../Images/bg.svg');
 }
 
 .header-container {
@@ -112,5 +115,4 @@ main {
 .img-content {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
-    width: 300px;
 }

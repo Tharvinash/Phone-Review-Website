@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block page_title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'Main/main.css' %}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 	{% block css_files %}{% endblock %}
 	{% load bootstrap5 %}
 	{% bootstrap_css %}
 	{% bootstrap_javascript %}
 </head>
-{% block header %}{% endblock %}
-
-{% block content %}{% endblock %}
+    <body>
+        <div class="header-container">            
+            <header>
+                <div>
+                    Django Phone Review
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'register' %}">Register</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        {% block content %}{% endblock %}
+    </body>
 </html>
