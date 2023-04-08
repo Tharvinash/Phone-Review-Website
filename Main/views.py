@@ -11,4 +11,4 @@ def main(request):
         response = render(request, 'Main/index.html', {'reviews': reviews})
         return HttpResponse(response)
     except:
-        return HttpResponseNotFound('<h1>error main page</h1>')
+        return HttpResponseNotFound('<h1>Index page crashed</h1>')
