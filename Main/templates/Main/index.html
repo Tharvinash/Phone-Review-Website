@@ -10,35 +10,41 @@
 {% endblock %}
 
 {% block content %}
-    <main>
+<main>
+    {% for review in reviews %}
+    <div class="main-content">
         <div class="review-content">
-            <img 
-                src="{% static 'Images/review_img.jpg' %}" 
-                alt="Phone Image"
-                class="img-content"
-            />
-
+            <div class="img-container">
+                <img 
+                    src="{% static 'Images/review_img.jpg' %}" 
+                    alt="Phone Image"
+                    class="img-content"
+                />
+            </div>
             <div class="review-text-holder">
                 <div>Title: </div>
                 <div class="title-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    {{ review.title }}
                 </div>
                 <div>Models: </div>
                 <div class="models-content">
+                    {% for model in review.models.all %}
+                        <div>{{ model.name }}</div>
+                    {% endfor %}
                     <div>Samsung</div>
-                    <div>Sony</div>
-                    <div>Apple</div>
                 </div>
                 <article>
                     Article: 
                 </article>
                 <div class="article-content">
-                    Morbi commodo ut mauris eget dictum. Nam ut nisl commodo, interdum arcu at, maximus ante. Pellentesque bibendum mauris non lacus ultrices, a scelerisque magna sagittis. Sed consequat consectetur velit, sed interdum quam pharetra quis. Pellentesque tincidunt laoreet quam vel blandit. Vivamus id leo id lorem congue tincidunt. Fusce sit amet tellus blandit, luctus felis ut, accumsan ipsum
+                    {{ review.article }}
                 </div>
             </div>
             <div class="date-time">
-                24/9/1999 23:14 pm
+                {{ review.date_published|date:"M d, Y H:i" }}
             </div>
         </div>
-    </main>
+    </div>
+    {% endfor %}
+</main>
 {% endblock %}

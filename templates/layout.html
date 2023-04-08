@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 	{% block css_files %}{% endblock %}
 	{% load bootstrap5 %}
+    {% load bootstrap_icons %}
 	{% bootstrap_css %}
 	{% bootstrap_javascript %}
 </head>
@@ -19,7 +20,7 @@
         <div class="header-container">            
             <header>
                 <div>
-                    Django Phone Review
+                    <a href="{% url 'index' %}">Django Phone Review</a>
                 </div>
                 <nav>
                     <ul>
