@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block page_title %}
+    Phone Brands List
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'Main/model-list.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<main>
+    <div class="phone-list-container">
+        <div class="phone-list-title">
+            <h1>Available Phone Brands</h1>
+        </div>
+        <div style="width: 100%;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Origin</th>
+                        <th>Manufacturing Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for model in models %}
+                    <tr>
+                        <td><a href="{% url 'specific-model' model.name %}">{{ model.name }}</a></td>
+                        <td>{{ model.origin }}</td>
+                        <td>{{ model.manufacturing_since }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+{% endblock %}

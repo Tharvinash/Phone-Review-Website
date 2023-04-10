@@ -21,5 +21,6 @@ urlpatterns = [
     path("", views.login, name='login'),
     path('admin/', admin.site.urls),
     path("index/", include('Main.urls')),
+    path("model-list/", include('PhoneReview.urls')),
     path("register/", views.register, name='register'),
 ]
