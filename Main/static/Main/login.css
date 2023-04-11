@@ -72,8 +72,8 @@ input:focus-visible {
     transform: translateY(4px);
 }
 
-.create-account:hover {
-    color: white;
-    text-decoration: underline;
+.create-account > a:hover {
+    color: white !important;
+    text-decoration: underline !important;
     cursor: pointer;
 }
