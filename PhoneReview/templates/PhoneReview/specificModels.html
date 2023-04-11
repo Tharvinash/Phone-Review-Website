@@ -28,7 +28,7 @@
                 <tbody>
                     {% for model in models %}
                     <tr>
-                        <td><a href="/">{{ model.name }}</a></td>
+                        <td><a href="{% url 'reviews' model.brand model.slug %}">{{ model.name }}</a></td>
                         <td>{{ model.brand }}</td>
                         <td>{{ model.launch_date }}</td>
                         <td>{{ model.platform }}</td>

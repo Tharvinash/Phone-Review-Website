@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils.text import slugify
+from django.urls import reverse
 
 # SuperUser
 # userName: Tharvin
@@ -18,9 +20,18 @@ class PhoneModel(models.Model):
     launch_date = models.DateField()
     platform = models.CharField(max_length=50)
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
+    slug = models.SlugField(default='', null=False)
 
     def __str__(self):
         return f'{self.name}'
+    
+    def get_url(self):
+        brand_name = self.brand.name
+        return reverse('reviews', args=[brand_name, self.slug])
+    
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
 
 class Review(models.Model):
     title = models.CharField(max_length=100)

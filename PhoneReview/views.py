@@ -13,13 +13,24 @@ def main(request):
         return HttpResponseNotFound('<h1>Phone models page crashed</h1>')
     
 def specificModel(request, model):    
-    try:
         brand = Brand.objects.get(name=model)
         logging.debug(f"model: {model}")
         logging.debug(f"brand: {brand}")
         brand_phones = PhoneModel.objects.filter(brand=brand)
-        logging.debug(f"brand_phones: {brand_phones}")
         response = render(request, 'PhoneReview/specificModels.html', {'models': brand_phones, 'brand': model})
         return HttpResponse(response)
+    # try:
+    # except:
+    #     return HttpResponseNotFound('<h1>Specific models page crashed</h1>')
+    
+def reviews(request, model, slug):    
+    try:
+        brand = Brand.objects.get(name='Vivo')
+        logging.debug(f"model: {slug}")
+        logging.debug(f"brand: {brand}")
+        brand_phones = PhoneModel.objects.filter(brand=brand)
+        logging.debug(f"brand_phones: {brand_phones}")
+        response = render(request, 'PhoneReview/specificModels.html', {'models': brand_phones})
+        return HttpResponse(response)
     except:
-        return HttpResponseNotFound('<h1>Specific models page crashed</h1>')
+        return HttpResponseNotFound('<h1>Review page crashed</h1>')
