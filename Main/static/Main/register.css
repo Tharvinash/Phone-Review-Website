@@ -1,0 +1,75 @@
+body > #register-content {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 5rem);;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 8rem 8rem 8rem;
+}
+
+.register-card {
+    display: flex;
+    width: 100%;
+    background-color: #cac4b6 !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 1rem;
+    height: 100%;
+}
+
+.welcome-text {
+    margin-bottom: 1rem; 
+    font-size: 3rem;  
+    text-align: center;
+}
+
+.form-container {
+    position: relative;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+}
+
+input {
+    border: none;
+    background-color: #FFFEFC;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+}
+
+input:focus-visible {
+    outline: #a5a08b auto 1px;
+}
+
+.button-register {
+    border-radius: 1rem;
+    padding: .5rem 3rem;
+    border: none;
+    background-color: #FFFEFC;
+}
+
+.button-register:hover {
+    background-color: #a5a08b;
+}
+
+.button-register:active {
+    box-shadow: 0 5px #6f6b5c;
+    transform: translateY(4px);
+}
+
+.login-site > a:hover {
+    color: white !important;
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+
+.other-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    font-size: 2rem;
+    width: 50%;
+    background: linear-gradient(0deg, rgba(161,156,136,1) 0%, rgba(200,196,183,1) 35%, rgba(255,254,252,1) 100%);
+}
