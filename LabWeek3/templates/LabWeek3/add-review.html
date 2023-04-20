@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block page_title %}
+    Add Review
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'Main/add.css' %}"/>
+{% endblock %}
+
+{% block content %}
+    <div id="add-review">
+        <div class="add-card">
+            <div style="width: 100%">
+                <div class="form-container gap-3 mb-3">
+                    <div class="form-title">
+                        Unleash the Power of Connectivity <br> Add A Phone Review
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1">Title</span>
+                        <input type="text" class="form-control" aria-label="Title" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group form-article">
+                        <span class="input-group-text">Article</span>
+                        <textarea class="form-control" aria-label="Article"></textarea>
+                    </div>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Select phone model</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <div>
+                        <button class="button-add">Add Review</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

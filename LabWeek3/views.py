@@ -15,3 +15,10 @@ def register(request):
         return HttpResponse(response)
     except:
         return HttpResponseNotFound('<h1>Register page crashed</h1>')
+    
+def addReview(request):
+    try:
+        response = render(request, 'LabWeek3/add-review.html')
+        return HttpResponse(response)
+    except:
+        return HttpResponseNotFound('<h1>Add review page crashed</h1>')
