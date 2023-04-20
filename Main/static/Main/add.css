@@ -83,3 +83,18 @@ input:focus-visible {
     text-decoration: underline !important;
     cursor: pointer;
 }
+
+.form-multiple-select {
+    display: flex;
+    width: 100%;
+}
+
+.form-multiple-select > .input-group-text {
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+.form-multiple-select > .form-select{
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+}
