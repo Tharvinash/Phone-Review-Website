@@ -14,7 +14,7 @@
         <div class="add-card">
             <div style="width: 100%">
                 <div class="form-container gap-3 mb-3">
-                    <form action="/" method="POST" class="add-review-form">
+                    <form action="/add-review/" method="POST" class="add-review-form">
                         {% csrf_token %}
                         {% for field in form %}
                         <div class="form-control {% if field.errors %} errors {% endif %}">
