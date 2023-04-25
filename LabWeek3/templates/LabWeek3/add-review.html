@@ -14,28 +14,17 @@
         <div class="add-card">
             <div style="width: 100%">
                 <div class="form-container gap-3 mb-3">
-                    <div class="form-title">
-                        Unleash the Power of Connectivity <br> Add A Phone Review
-                    </div>
-                    <div class="input-group">
-                        <span class="input-group-text" id="basic-addon1">Title</span>
-                        <input type="text" class="form-control" aria-label="Title" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group form-article">
-                        <span class="input-group-text">Article</span>
-                        <textarea class="form-control" aria-label="Article"></textarea>
-                    </div>
-                    <div class="form-multiple-select">
-                        <span class="input-group-text" id="basic-addon1">Models</span>
-                        <select class="form-select" aria-label="Default select example" multiple>
-                            {% for phoneModel in phoneModels %}
-                            <option value="{{ phoneModel }}">{{ phoneModel }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                    <div>
-                        <button class="button-add">Add Review</button>
-                    </div>
+                    <form action="/" method="POST" class="add-review-form">
+                        {% csrf_token %}
+                        {% for field in form %}
+                        <div class="form-control {% if field.errors %} errors {% endif %}">
+                            {{ field.label_tag }}
+                            {{ field }}
+                            {{ field.errors }}
+                        </div>
+                        {% endfor %}
+                        <button type="submit" class="button-add">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
