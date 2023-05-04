@@ -1,6 +1,6 @@
 # Phone-Review-Website
 
-This repository is a phone review website created fot django class lab session
+This repository is a phone review website created for django class lab session
 
 ## Installation
 
