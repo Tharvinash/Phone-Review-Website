@@ -11,10 +11,10 @@ pip3 install Django
 
 Run application
 ```bash
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 Download bootstrap if needed
 ```bash
-pip install django-bootstrap-v5
+pip3 install django-bootstrap-v5
 ```
