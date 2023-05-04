@@ -19,6 +19,11 @@ Download bootstrap if needed
 pip3 install django-bootstrap-v5
 ```
 
+Once the application is started visit this url to view the website
+```bash
+http://127.0.0.1:8000/
+```
+
 # Website UI
 
 ![Picture1](https://user-images.githubusercontent.com/45817738/236128391-6cccc5bf-899f-4816-aef4-a1e178358bb5.png)
