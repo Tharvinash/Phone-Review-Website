@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'bootstrap5',
 ]
 
-NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
+NPM_BIN_PATH = "C:/Program Files (x86)/nodejs/npm.cmd"
+
+# C:\Program Files (x86)\nodejs\npm.cmd
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
